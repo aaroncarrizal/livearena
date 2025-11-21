@@ -13,7 +13,7 @@ interface Props {
 export const MatchCard = ({ title, imageUrl, matchId }: Props) => {
   const router = useRouter()
   const handleClick = () => {
-    router.push(`/matches/${matchId}`)
+    router.push(`/events/${matchId}`)
   }
   return (
     <Card className="group relative overflow-hidden border-none bg-card hover:scale-105 transition-transform duration-300 cursor-pointer" onClick={handleClick} >

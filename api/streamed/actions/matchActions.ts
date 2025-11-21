@@ -21,3 +21,8 @@ export const getLiveMatchesBySportAction = async (sportId: string): Promise<Matc
   const matches = data.filter((match) => match.category == sportId);
   return matches;
 };
+
+export const getMostPopularLiveMatch = async (): Promise<MatchResponse> => {
+  const { data } = await streamedApi.get<MatchResponse[]>('/matches/live/popular');
+  return data[0];
+};
