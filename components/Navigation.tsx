@@ -1,6 +1,7 @@
 import { Search, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Navigation = () => {
   return (
@@ -15,13 +16,10 @@ export const Navigation = () => {
               <Link href="/browse" className="text-foreground hover:text-primary transition-colors font-medium">
                 Browse
               </Link>
-              <Link href="/browse" className="text-muted-foreground hover:text-foreground transition-colors">
-                Live Now
-              </Link>
               <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                 Schedule
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/browse/categories" className="text-muted-foreground hover:text-foreground transition-colors">
                 Categories
               </Link>
             </div>
@@ -36,6 +34,7 @@ export const Navigation = () => {
             <Button variant="ghost" size="icon" className="md:hidden text-muted-foreground hover:text-foreground">
               <Menu className="w-5 h-5" />
             </Button>
+            <ThemeToggle/>
           </div>
         </div>
       </div>

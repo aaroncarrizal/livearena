@@ -26,3 +26,18 @@ export const getMostPopularLiveMatch = async (): Promise<MatchResponse> => {
   const { data } = await streamedApi.get<MatchResponse[]>('/matches/live/popular');
   return data[0];
 };
+
+export const getMatchByIdAction = async (matchId: string): Promise<MatchResponse> => {
+  try {
+    const { data } = await streamedApi.get<MatchResponse[]>('/matches/all');
+    const match = data.find((m) => m.id === matchId);
+    if (!match) {
+      throw new Error(`Match with id: ${matchId} not found`);
+    }
+    return match;
+
+  } catch (error) {
+    console.error(error);
+    throw error instanceof Error ? error : new Error('Unknown error');
+  }
+};

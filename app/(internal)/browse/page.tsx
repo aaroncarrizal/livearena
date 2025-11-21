@@ -4,16 +4,17 @@ import { MatchCategory } from "@/components/MatchCategory";
 
 const Page = async () => {
   const categories = await getAllSports()
+  // categories = categories.slice(0,2)/*  */
   return (
-    <section>
+    <>
       <FeaturedMatch />
-      <div className="px-4">
+      <section className="px-4">
         {categories.map(category =>(
         <MatchCategory key={category.id} categoryName={category.name} categoryId={category.id}/>
       ))}
 
-      </div>
-    </section>
+      </section>
+    </>
   )
 };
 

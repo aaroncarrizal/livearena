@@ -44,7 +44,7 @@ const Page = () => {
       <section className="py-24 px-4 sm:px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center text-foreground mb-16">
-            Why Choose LiveSports?
+            Why Choose LiveArena?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6">
@@ -144,7 +144,7 @@ const Page = () => {
       {/* Footer */}
       <footer className="py-12 px-4 sm:px-6 border-t border-border">
         <div className="container mx-auto max-w-6xl text-center text-muted-foreground">
-          <p>&copy; 2024 LiveSports. All rights reserved.</p>
+          <p>&copy; 2025 LiveArena. All rights reserved.</p>
         </div>
       </footer>
     </div>
